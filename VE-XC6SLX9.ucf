@@ -1,0 +1,21 @@
+# Crystal Clock - use 50MHz onboard oscillator
+NET "CLK50MHZ" LOC = "P123" | IOSTANDARD = LVCMOS25 | PERIOD = 31.25ns;
+
+#VGA
+NET "vsync" LOC = "P9";
+NET "hsync" LOC = "P10";
+NET "r<3>" LOC = "P35";
+NET "r<2>" LOC = "P34";
+NET "r<1>" LOC = "P33";
+NET "r<0>" LOC = "P32";
+NET "g<3>" LOC = "P30";
+NET "g<2>" LOC = "P29";
+NET "g<1>" LOC = "P27";
+NET "g<0>" LOC = "P26";
+NET "b<3>" LOC = "P24";
+NET "b<2>" LOC = "P23";
+NET "b<1>" LOC = "P22";
+NET "b<0>" LOC = "P21";
+
+NET "KEY0" LOC = "P118";
+NET "KEY1" LOC = "P119";

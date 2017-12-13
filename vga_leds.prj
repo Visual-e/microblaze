@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/cpu.v"
+verilog work "hvsync.v"
+verilog work "ipcore_dir/clk_wiz_v3_6.v"
+verilog work "display.v"
+verilog work "vga_leds.v"

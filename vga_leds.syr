@@ -1,0 +1,1082 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: vga_leds.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_leds.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_leds"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : vga_leds
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\cpu.v" into library work
+Parsing module <cpu>.
+Analyzing Verilog file "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\hvsync.v" into library work
+Parsing module <hvsync>.
+Analyzing Verilog file "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v" into library work
+Parsing module <clk_wiz_v3_6>.
+Analyzing Verilog file "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" into library work
+Parsing module <display>.
+Analyzing Verilog file "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\vga_leds.v" into library work
+Parsing module <vga_leds>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <vga_leds>.
+
+Elaborating module <clk_wiz_v3_6>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=12,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=8,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=6,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v" Line 120: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v" Line 121: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v" Line 122: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v" Line 123: Assignment to clkout5_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <cpu>.
+
+Elaborating module <display>.
+
+Elaborating module <hvsync>.
+WARNING:HDLCompiler:1127 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 59: Assignment to d_active ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 78: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 136: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 137: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 138: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 139: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 140: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 141: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 151: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 158: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 165: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 168: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 171: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 174: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 177: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 180: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 187: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 190: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 193: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 196: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 199: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 202: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 205: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 208: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 211: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 214: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 217: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 220: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 228: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 231: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 234: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 237: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 240: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 243: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 250: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 253: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 256: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 259: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 262: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 265: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 268: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 271: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 274: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 277: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 280: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 283: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 291: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 294: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 297: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 300: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 303: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" Line 306: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:189 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\vga_leds.v" Line 41: Size mismatch in connection of port <segments>. Formal port size is 24-bit while actual signal size is 16-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vga_leds>.
+    Related source file is "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\vga_leds.v".
+WARNING:Xst:647 - Input <KEY0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <KEY1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <vga_leds> synthesized.
+
+Synthesizing Unit <clk_wiz_v3_6>.
+    Related source file is "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\ipcore_dir\clk_wiz_v3_6.v".
+    Summary:
+	no macro.
+Unit <clk_wiz_v3_6> synthesized.
+
+Synthesizing Unit <display>.
+    Related source file is "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v".
+        NUM_RED_LEDS = 16
+        NUM_GREEN_LEDS = 16
+        NUM_SEGMENTS = 6
+INFO:Xst:3210 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" line 38: Output port <active> of the instance <u_hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\display.v" line 38: Output port <dbg> of the instance <u_hvsync> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <r_vsync>.
+    Found 1-bit register for signal <r_vsync_>.
+    Found 16-bit register for signal <red_leds_fixed>.
+    Found 16-bit register for signal <green_leds_fixed>.
+    Found 24-bit register for signal <segments_fixed>.
+    Found 7-bit register for signal <seg7_0>.
+    Found 7-bit register for signal <seg7_1>.
+    Found 7-bit register for signal <seg7_2>.
+    Found 7-bit register for signal <seg7_3>.
+    Found 7-bit register for signal <seg7_4>.
+    Found 7-bit register for signal <seg7_5>.
+    Found 3-bit register for signal <color_fixed>.
+    Found 1-bit register for signal <r_hsync>.
+    Found 4-bit subtractor for signal <led_idx> created at line 78.
+    Found 32-bit shifter logical right for signal <GND_7_o_led_idx[3]_shift_right_15_OUT> created at line 79
+    Found 32-bit shifter logical right for signal <GND_7_o_led_idx[3]_shift_right_17_OUT> created at line 80
+    Found 16x8-bit Read Only RAM for signal <n0240>
+    Found 16x8-bit Read Only RAM for signal <n0241>
+    Found 16x8-bit Read Only RAM for signal <n0242>
+    Found 16x8-bit Read Only RAM for signal <n0243>
+    Found 16x8-bit Read Only RAM for signal <n0244>
+    Found 16x8-bit Read Only RAM for signal <n0245>
+    Found 8x12-bit Read Only RAM for signal <_n0468>
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_13_o> created at line 77
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_20_o> created at line 82
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_21_o> created at line 82
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_22_o> created at line 83
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_23_o> created at line 83
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_24_o> created at line 84
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_25_o> created at line 84
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_26_o> created at line 85
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_27_o> created at line 85
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_28_o> created at line 86
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_29_o> created at line 86
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_30_o> created at line 87
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_31_o> created at line 87
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_32_o> created at line 89
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_33_o> created at line 89
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_34_o> created at line 90
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_35_o> created at line 90
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_36_o> created at line 91
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_37_o> created at line 91
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_38_o> created at line 92
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_39_o> created at line 92
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_40_o> created at line 93
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_41_o> created at line 93
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_42_o> created at line 94
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_43_o> created at line 94
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_44_o> created at line 96
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_45_o> created at line 96
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_46_o> created at line 97
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_47_o> created at line 97
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_48_o> created at line 98
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_49_o> created at line 98
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_50_o> created at line 99
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_51_o> created at line 99
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_52_o> created at line 100
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_53_o> created at line 100
+    Found 12-bit comparator greater for signal <w_pixel_count[11]_GND_7_o_LessThan_54_o> created at line 101
+    Found 12-bit comparator greater for signal <GND_7_o_w_pixel_count[11]_LessThan_55_o> created at line 101
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_69_o> created at line 148
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_70_o> created at line 148
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_73_o> created at line 155
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_74_o> created at line 155
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_77_o> created at line 162
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_78_o> created at line 162
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_91_o> created at line 185
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_92_o> created at line 185
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_117_o> created at line 225
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_118_o> created at line 225
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_131_o> created at line 248
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_132_o> created at line 248
+    Found 12-bit comparator greater for signal <GND_7_o_w_line_count[11]_LessThan_157_o> created at line 288
+    Found 12-bit comparator greater for signal <w_line_count[11]_GND_7_o_LessThan_158_o> created at line 288
+    Summary:
+	inferred   7 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 104 D-type flip-flop(s).
+	inferred  51 Comparator(s).
+	inferred  44 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <display> synthesized.
+
+Synthesizing Unit <hvsync>.
+    Related source file is "E:\projects\prj_fpga_xilinx\prj_VE-XC6SLX9\xc6_prj\projects\microblaze\hvsync.v".
+        horz_front_porch = 110
+        horz_sync = 40
+        horz_back_porch = 220
+        horz_addr_time = 1280
+        vert_front_porch = 5
+        vert_sync = 5
+        vert_back_porch = 20
+        vert_addr_time = 720
+    Found 12-bit register for signal <pixel_count>.
+    Found 12-bit register for signal <line_count>.
+    Found 1-bit register for signal <vsync>.
+    Found 1-bit register for signal <hsync>.
+    Found 1-bit register for signal <dbg>.
+    Found 12-bit adder for signal <pixel_count[11]_GND_8_o_add_3_OUT> created at line 42.
+    Found 12-bit adder for signal <line_count[11]_GND_8_o_add_9_OUT> created at line 58.
+    Found 12-bit comparator lessequal for signal <n0000> created at line 39
+    Found 12-bit comparator greater for signal <pixel_count[11]_GND_8_o_LessThan_2_o> created at line 39
+    Found 12-bit comparator greater for signal <pixel_count[11]_GND_8_o_LessThan_3_o> created at line 41
+    Found 12-bit comparator lessequal for signal <n0009> created at line 55
+    Found 12-bit comparator greater for signal <line_count[11]_GND_8_o_LessThan_8_o> created at line 55
+    Found 12-bit comparator greater for signal <line_count[11]_GND_8_o_LessThan_9_o> created at line 57
+    Found 12-bit comparator greater for signal <pixel_count[11]_GND_8_o_LessThan_13_o> created at line 64
+    Found 12-bit comparator greater for signal <line_count[11]_GND_8_o_LessThan_14_o> created at line 64
+    Found 12-bit comparator greater for signal <GND_8_o_line_count[11]_LessThan_16_o> created at line 67
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <hvsync> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x8-bit single-port Read Only RAM                    : 6
+ 8x12-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 3
+ 12-bit adder                                          : 2
+ 4-bit subtractor                                      : 1
+# Registers                                            : 18
+ 1-bit register                                        : 6
+ 12-bit register                                       : 2
+ 16-bit register                                       : 2
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 7-bit register                                        : 6
+# Comparators                                          : 60
+ 12-bit comparator greater                             : 58
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 46
+ 12-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 44
+# Logic shifters                                       : 2
+ 32-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/cpu.ngc>.
+Loading core <cpu> for timing and area information for instance <cpu_inst>.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_16> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_17> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_18> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_19> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_20> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_21> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_22> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_fixed_23> (without init value) has a constant value of 0 in block <display_inst>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <display>.
+INFO:Xst:3231 - The small RAM <Mram__n0468> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <color_fixed>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0240> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0241> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0242> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<11:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0243> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<15:12>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0244> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<19:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_n0245> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <segments_fixed<23:20>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <display> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hvsync>.
+The following registers are absorbed into counter <pixel_count>: 1 register on signal <pixel_count>.
+The following registers are absorbed into counter <line_count>: 1 register on signal <line_count>.
+Unit <hvsync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x8-bit single-port distributed Read Only RAM        : 6
+ 8x12-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 2
+# Registers                                            : 107
+ Flip-Flops                                            : 107
+# Comparators                                          : 60
+ 12-bit comparator greater                             : 58
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 110
+ 1-bit 2-to-1 multiplexer                              : 99
+ 3-bit 2-to-1 multiplexer                              : 11
+# Logic shifters                                       : 2
+ 32-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_1> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_1> 
+INFO:Xst:2261 - The FF/Latch <segments_fixed_16> in Unit <display> is equivalent to the following 7 FFs/Latches, which will be removed : <segments_fixed_17> <segments_fixed_18> <segments_fixed_19> <segments_fixed_20> <segments_fixed_21> <segments_fixed_22> <segments_fixed_23> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_2> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_2> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_3> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_3> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_4> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_4> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_5> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_5> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_6> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_6> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_7> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_7> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_8> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_8> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_9> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_9> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_10> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_10> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_11> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_11> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_12> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_12> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_13> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_13> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_14> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_14> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_15> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_15> 
+INFO:Xst:2261 - The FF/Latch <red_leds_fixed_0> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <segments_fixed_0> 
+WARNING:Xst:1710 - FF/Latch <segments_fixed_16> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seg7_4_0> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_1> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_2> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_3> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_4> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_5> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_4_6> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_0> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_1> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_2> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_3> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_4> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_5> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg7_5_6> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance mypll_inst/pll_base_inst in unit mypll_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <vga_leds> ...
+
+Optimizing unit <display> ...
+
+Optimizing unit <hvsync> ...
+WARNING:Xst:2677 - Node <display_inst/u_hvsync/dbg> of sequential type is unconnected in block <vga_leds>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_leds, actual ratio is 15.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <cpu_inst> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <cpu_inst> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <cpu_inst> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <cpu_inst> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+FlipFlop display_inst/r_vsync has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 93
+ Flip-Flops                                            : 93
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vga_leds.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1227
+#      GND                         : 2
+#      INV                         : 27
+#      LUT1                        : 12
+#      LUT2                        : 116
+#      LUT3                        : 91
+#      LUT4                        : 268
+#      LUT5                        : 84
+#      LUT6                        : 251
+#      LUT6_2                      : 106
+#      MULT_AND                    : 3
+#      MUXCY                       : 38
+#      MUXCY_L                     : 77
+#      MUXF5                       : 64
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 86
+# FlipFlops/Latches                : 766
+#      FD                          : 173
+#      FDC                         : 41
+#      FDC_1                       : 5
+#      FDCE                        : 15
+#      FDE                         : 255
+#      FDE_1                       : 8
+#      FDP                         : 9
+#      FDR                         : 87
+#      FDRE                        : 152
+#      FDRE_1                      : 1
+#      FDS                         : 7
+#      FDSE                        : 13
+# RAMS                             : 68
+#      RAM32X1D                    : 64
+#      RAMB16BWER                  : 4
+# Shift Registers                  : 88
+#      SRL16E                      : 77
+#      SRLC16E                     : 11
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 15
+#      IBUFG                       : 1
+#      OBUF                        : 14
+# Others                           : 2
+#      BSCAN_SPARTAN6              : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             765  out of  11440     6%  
+ Number of Slice LUTs:                 1171  out of   5720    20%  
+    Number used as Logic:               955  out of   5720    16%  
+    Number used as Memory:              216  out of   1440    15%  
+       Number used as RAM:              128
+       Number used as SRL:               88
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1524
+   Number with an unused Flip Flop:     759  out of   1524    49%  
+   Number with an unused LUT:           353  out of   1524    23%  
+   Number of fully used LUT-FF pairs:   412  out of   1524    27%  
+   Number of unique control sets:        58
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  15  out of    102    14%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of     32    12%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                     | Clock buffer(FF name)                                                                                           | Load  |
+---------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+mypll_inst/pll_base_inst/CLKOUT0                                                 | BUFG                                                                                                            | 80    |
+display_inst/u_hvsync/hsync                                                      | NONE(display_inst/u_hvsync/line_count_11)                                                                       | 13    |
+mypll_inst/pll_base_inst/CLKOUT1                                                 | BUFG                                                                                                            | 546   |
+cpu_inst/U0/Debug.mdm_0/drck_i                                                   | BUFG                                                                                                            | 209   |
+cpu_inst/U0/Debug.mdm_0/update                                                   | NONE(cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/command_reg_0)| 40    |
+cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write| NONE(cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/PLB_Interconnect.PLBv46_rdDBus_DFF[31].PLBv46_rdBus_FDRE)              | 34    |
+---------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.526ns (Maximum Frequency: 117.283MHz)
+   Minimum input arrival time before clock: 7.239ns
+   Maximum output required time after clock: 6.532ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mypll_inst/pll_base_inst/CLKOUT0'
+  Clock period: 6.671ns (frequency: 149.893MHz)
+  Total number of paths / destination ports: 2575 / 80
+-------------------------------------------------------------------------
+Delay:               6.671ns (Levels of Logic = 6)
+  Source:            display_inst/u_hvsync/pixel_count_9 (FF)
+  Destination:       display_inst/color_fixed_1 (FF)
+  Source Clock:      mypll_inst/pll_base_inst/CLKOUT0 rising
+  Destination Clock: mypll_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: display_inst/u_hvsync/pixel_count_9 to display_inst/color_fixed_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.447   1.031  display_inst/u_hvsync/pixel_count_9 (display_inst/u_hvsync/pixel_count_9)
+     LUT3:I0->O           26   0.205   1.571  display_inst/GND_7_o_w_pixel_count[11]_LessThan_33_o111 (display_inst/GND_7_o_w_pixel_count[11]_LessThan_33_o11)
+     LUT6:I0->O            1   0.203   0.944  display_inst/Mmux_color205 (display_inst/Mmux_color204)
+     LUT6:I0->O            2   0.203   0.845  display_inst/Mmux_color207 (display_inst/Mmux_color206)
+     LUT6:I3->O            1   0.205   0.000  display_inst/Mmux_color2010_SW1_F (N97)
+     MUXF7:I0->O           1   0.131   0.580  display_inst/Mmux_color2010_SW1 (N75)
+     LUT6:I5->O            1   0.205   0.000  display_inst/Mmux_color2011 (display_inst/color<1>)
+     FDR:D                     0.102          display_inst/color_fixed_1
+    ----------------------------------------
+    Total                      6.671ns (1.701ns logic, 4.970ns route)
+                                       (25.5% logic, 74.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'display_inst/u_hvsync/hsync'
+  Clock period: 4.963ns (frequency: 201.479MHz)
+  Total number of paths / destination ports: 1170 / 13
+-------------------------------------------------------------------------
+Delay:               4.963ns (Levels of Logic = 15)
+  Source:            display_inst/u_hvsync/line_count_4 (FF)
+  Destination:       display_inst/u_hvsync/line_count_11 (FF)
+  Source Clock:      display_inst/u_hvsync/hsync rising
+  Destination Clock: display_inst/u_hvsync/hsync rising
+
+  Data Path: display_inst/u_hvsync/line_count_4 to display_inst/u_hvsync/line_count_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             19   0.447   1.416  display_inst/u_hvsync/line_count_4 (display_inst/u_hvsync/line_count_4)
+     LUT5:I0->O            1   0.203   0.808  display_inst/u_hvsync/line_count[11]_GND_8_o_LessThan_9_o_inv_inv11 (display_inst/u_hvsync/line_count[11]_GND_8_o_LessThan_9_o_inv_inv1)
+     LUT6:I3->O           13   0.205   1.037  display_inst/u_hvsync/line_count[11]_GND_8_o_LessThan_9_o_inv_inv13 (display_inst/u_hvsync/line_count[11]_GND_8_o_LessThan_9_o_inv_inv)
+     LUT2:I0->O            1   0.203   0.000  display_inst/u_hvsync/Mcount_line_count_lut<0> (display_inst/u_hvsync/Mcount_line_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  display_inst/u_hvsync/Mcount_line_count_cy<0> (display_inst/u_hvsync/Mcount_line_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<1> (display_inst/u_hvsync/Mcount_line_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<2> (display_inst/u_hvsync/Mcount_line_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<3> (display_inst/u_hvsync/Mcount_line_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<4> (display_inst/u_hvsync/Mcount_line_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<5> (display_inst/u_hvsync/Mcount_line_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<6> (display_inst/u_hvsync/Mcount_line_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<7> (display_inst/u_hvsync/Mcount_line_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<8> (display_inst/u_hvsync/Mcount_line_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<9> (display_inst/u_hvsync/Mcount_line_count_cy<9>)
+     MUXCY:CI->O           0   0.019   0.000  display_inst/u_hvsync/Mcount_line_count_cy<10> (display_inst/u_hvsync/Mcount_line_count_cy<10>)
+     XORCY:CI->O           1   0.180   0.000  display_inst/u_hvsync/Mcount_line_count_xor<11> (display_inst/u_hvsync/Mcount_line_count11)
+     FDC:D                     0.102          display_inst/u_hvsync/line_count_11
+    ----------------------------------------
+    Total                      4.963ns (1.702ns logic, 3.261ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mypll_inst/pll_base_inst/CLKOUT1'
+  Clock period: 7.804ns (frequency: 128.134MHz)
+  Total number of paths / destination ports: 77697 / 2007
+-------------------------------------------------------------------------
+Delay:               7.804ns (Levels of Logic = 5)
+  Source:            cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE (FF)
+  Destination:       cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Stop_Instr_Fetch_FDRSE (FF)
+  Source Clock:      mypll_inst/pll_base_inst/CLKOUT1 rising
+  Destination Clock: mypll_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE to cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Stop_Instr_Fetch_FDRSE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            34   0.447   1.321  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE (U0/microblaze_I/LOCKSTEP_Master_Out<2>)
+     LUT2:I1->O            2   0.205   0.721  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/load_Store_without_dbg1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/load_Store_without_dbg)
+     LUT4:I2->O            1   0.203   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.of_PipeRun_Select_LUT4 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/of_PipeRun_Select)
+     MUXCY_L:S->LO       175   0.172   2.278  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.of_PipeRun_MuxCY_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.of_PipeRun)
+     LUT4:I0->O            5   0.203   1.079  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Ok_To_Stop1 (U0/microblaze_I/MicroBlaze_Core_I/Area.ok_To_Stop)
+     LUT6:I0->O            3   0.203   0.650  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.stopping_allowed1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.stopping_allowed)
+     FDRE:CE                   0.322          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Stop_Instr_Fetch_FDRSE
+    ----------------------------------------
+    Total                      7.804ns (1.755ns logic, 6.049ns route)
+                                       (22.5% logic, 77.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpu_inst/U0/Debug.mdm_0/drck_i'
+  Clock period: 6.989ns (frequency: 143.092MHz)
+  Total number of paths / destination ports: 345 / 249
+-------------------------------------------------------------------------
+Delay:               3.494ns (Levels of Logic = 2)
+  Source:            cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 (FF)
+  Destination:       cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE (FF)
+  Source Clock:      cpu_inst/U0/Debug.mdm_0/drck_i rising
+  Destination Clock: cpu_inst/U0/Debug.mdm_0/drck_i falling
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 to cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.447   0.931  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter<3>)
+     LUT4:I0->O            1   0.203   0.808  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected_SW0 (N88)
+     LUT6:I3->O            1   0.205   0.579  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected)
+     FDRE_1:CE                 0.322          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE
+    ----------------------------------------
+    Total                      3.494ns (1.177ns logic, 2.317ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpu_inst/U0/Debug.mdm_0/update'
+  Clock period: 8.526ns (frequency: 117.283MHz)
+  Total number of paths / destination ports: 251 / 49
+-------------------------------------------------------------------------
+Delay:               4.263ns (Levels of Logic = 2)
+  Source:            cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_TClk (FF)
+  Source Clock:      cpu_inst/U0/Debug.mdm_0/update falling
+  Destination Clock: cpu_inst/U0/Debug.mdm_0/update rising
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_TClk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           15   0.447   1.346  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd)
+     LUT6:I0->O            4   0.203   0.912  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_GND_164_o_PWR_65_o_MUX_4604_o111 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_GND_164_o_PWR_65_o_MUX_4604_o11)
+     LUT5:I2->O            9   0.205   0.829  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En<0>1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En)
+     FDCE:CE                   0.322          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/single_Step_TClk
+    ----------------------------------------
+    Total                      4.263ns (1.177ns logic, 3.086ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write'
+  Clock period: 2.001ns (frequency: 499.763MHz)
+  Total number of paths / destination ports: 137 / 81
+-------------------------------------------------------------------------
+Delay:               2.001ns (Levels of Logic = 5)
+  Source:            cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I (FF)
+  Destination:       cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I (FF)
+  Source Clock:      cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write rising
+  Destination Clock: cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write rising
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I to cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.447   0.857  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr<0>)
+     LUT1:I0->O            1   0.205   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I_rt (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I_rt)
+     MUXCY_L:S->LO         1   0.172   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<1>)
+     MUXCY_L:CI->LO        1   0.019   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[1].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<2>)
+     MUXCY_L:CI->LO        0   0.019   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[2].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<3>)
+     XORCY:CI->O           1   0.180   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].XORCY_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/sum_A<3>)
+     FDRE:D                    0.102          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I
+    ----------------------------------------
+    Total                      2.001ns (1.144ns logic, 0.857ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mypll_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.849ns (Levels of Logic = 0)
+  Source:            cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:UPDATE (PAD)
+  Destination:       cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/running_clock (FF)
+  Destination Clock: mypll_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:UPDATE to cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/running_clock
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:UPDATE   41   0.000   1.419  U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I (U0/Debug.mdm_0/update)
+     FDC:CLR                   0.430          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/running_clock
+    ----------------------------------------
+    Total                      1.849ns (0.430ns logic, 1.419ns route)
+                                       (23.3% logic, 76.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_inst/U0/Debug.mdm_0/drck_i'
+  Total number of paths / destination ports: 182 / 126
+-------------------------------------------------------------------------
+Offset:              3.185ns (Levels of Logic = 10)
+  Source:            cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT (PAD)
+  Destination:       cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7 (FF)
+  Destination Clock: cpu_inst/U0/Debug.mdm_0/drck_i rising
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT to cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    5   0.000   1.079  U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I (U0/Debug.mdm_0/shift)
+     LUT6:I0->O           17   0.203   1.132  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Mmux_shifting_Data1 (U0/microblaze_0_mdm_bus_Dbg_Shift)
+     LUT2:I0->O            1   0.203   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_lut<0> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<0> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<1> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<2> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<3> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<4> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<5> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<6> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_xor<7> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count7)
+     FD:D                      0.102          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+    ----------------------------------------
+    Total                      3.185ns (0.974ns logic, 2.211ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_inst/U0/Debug.mdm_0/update'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              7.239ns (Levels of Logic = 6)
+  Source:            cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SEL (PAD)
+  Destination:       cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination Clock: cpu_inst/U0/Debug.mdm_0/update falling
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SEL to cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL     7   0.000   0.878  U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I (U0/Debug.mdm_0/sel)
+     LUT5:I3->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/_n01281 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/_n0128)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].local_sel_n)
+     LUT4:I0->O            1   0.203   0.579  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].local_sel_n)
+     FDC_1:CLR                 0.430          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+    ----------------------------------------
+    Total                      7.239ns (1.648ns logic, 5.591ns route)
+                                       (22.8% logic, 77.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mypll_inst/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 30 / 12
+-------------------------------------------------------------------------
+Offset:              4.870ns (Levels of Logic = 2)
+  Source:            display_inst/color_fixed_0 (FF)
+  Destination:       r<3> (PAD)
+  Source Clock:      mypll_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: display_inst/color_fixed_0 to r<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.447   1.031  display_inst/color_fixed_0 (display_inst/color_fixed_0)
+     LUT3:I0->O            2   0.205   0.616  display_inst/Mram__n046831 (r_2_OBUF)
+     OBUF:I->O                 2.571          r_3_OBUF (r<3>)
+    ----------------------------------------
+    Total                      4.870ns (3.223ns logic, 1.647ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpu_inst/U0/Debug.mdm_0/update'
+  Total number of paths / destination ports: 40 / 1
+-------------------------------------------------------------------------
+Offset:              4.739ns (Levels of Logic = 4)
+  Source:            cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 (FF)
+  Destination:       cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      cpu_inst/U0/Debug.mdm_0/update falling
+
+  Data Path: cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 to cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q           14   0.447   1.302  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command<5>)
+     LUT5:I0->O            1   0.203   0.808  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i15 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i14)
+     LUT5:I2->O            1   0.205   0.684  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i17_SW0 (N92)
+     LUT6:I4->O            1   0.203   0.684  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i17 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i16)
+     LUT6:I4->O            0   0.203   0.000  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i139 (U0/Debug.mdm_0/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      4.739ns (1.261ns logic, 3.478ns route)
+                                       (26.6% logic, 73.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpu_inst/U0/Debug.mdm_0/drck_i'
+  Total number of paths / destination ports: 213 / 1
+-------------------------------------------------------------------------
+Offset:              6.532ns (Levels of Logic = 5)
+  Source:            cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 (FF)
+  Destination:       cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      cpu_inst/U0/Debug.mdm_0/drck_i rising
+
+  Data Path: cpu_inst/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 to cpu_inst/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              28   0.447   1.463  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count<2>)
+     LUT3:I0->O            4   0.205   1.028  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_TDO1111181 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_TDO111118)
+     LUT6:I1->O            1   0.203   0.924  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i128 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i127)
+     LUT6:I1->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i129 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i128)
+     LUT6:I2->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i132 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i131)
+     LUT6:I2->O            0   0.203   0.000  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i139 (U0/Debug.mdm_0/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      6.532ns (1.464ns logic, 5.068ns route)
+                                       (22.4% logic, 77.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write|    2.001|         |         |         |
+cpu_inst/U0/Debug.mdm_0/drck_i                                                   |    1.063|         |         |         |
+cpu_inst/U0/Debug.mdm_0/update                                                   |    1.334|         |         |         |
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpu_inst/U0/Debug.mdm_0/drck_i
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write|    2.852|         |         |         |
+cpu_inst/U0/Debug.mdm_0/drck_i                                                   |    2.441|    3.477|    3.494|         |
+cpu_inst/U0/Debug.mdm_0/update                                                   |         |    4.787|    3.548|         |
+mypll_inst/pll_base_inst/CLKOUT1                                                 |    3.338|         |         |         |
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpu_inst/U0/Debug.mdm_0/update
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+cpu_inst/U0/Debug.mdm_0/drck_i  |    1.232|         |         |         |
+cpu_inst/U0/Debug.mdm_0/update  |         |    4.263|    7.926|         |
+mypll_inst/pll_base_inst/CLKOUT1|    2.508|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock display_inst/u_hvsync/hsync
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+display_inst/u_hvsync/hsync|    4.963|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mypll_inst/pll_base_inst/CLKOUT0
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+display_inst/u_hvsync/hsync     |    9.466|         |         |         |
+mypll_inst/pll_base_inst/CLKOUT0|    6.671|         |         |         |
+mypll_inst/pll_base_inst/CLKOUT1|    1.950|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mypll_inst/pll_base_inst/CLKOUT1
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+cpu_inst/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/valid_Write|    1.599|         |         |         |
+cpu_inst/U0/Debug.mdm_0/drck_i                                                   |    3.730|         |         |         |
+cpu_inst/U0/Debug.mdm_0/update                                                   |    2.815|         |         |         |
+mypll_inst/pll_base_inst/CLKOUT1                                                 |    7.804|         |         |         |
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.55 secs
+ 
+--> 
+
+Total memory usage is 285824 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   83 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

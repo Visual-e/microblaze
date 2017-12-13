@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.xst" -ofn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.syr" 
+xst -intstyle ise -ifn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.xst" -ofn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.syr" 
+xst -intstyle ise -ifn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.xst" -ofn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc VE-XC6SLX9.ucf -p xc6slx9-tqg144-3 vga_leds.ngc vga_leds.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_leds_map.ncd vga_leds.ngd vga_leds.pcf 
+par -w -intstyle ise -ol high -mt off vga_leds_map.ncd vga_leds.ncd vga_leds.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_leds.twx vga_leds.ncd -o vga_leds.twr vga_leds.pcf -ucf VE-XC6SLX9.ucf 
+bitgen -intstyle ise -f vga_leds.ut vga_leds.ncd 
+xst -intstyle ise -ifn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.xst" -ofn "E:/projects/prj_fpga_xilinx/prj_VE-XC6SLX9/xc6_prj/projects/microblaze/vga_leds.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc VE-XC6SLX9.ucf -p xc6slx9-tqg144-3 vga_leds.ngc vga_leds.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_leds_map.ncd vga_leds.ngd vga_leds.pcf 
+par -w -intstyle ise -ol high -mt off vga_leds_map.ncd vga_leds.ncd vga_leds.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_leds.twx vga_leds.ncd -o vga_leds.twr vga_leds.pcf -ucf VE-XC6SLX9.ucf 
+bitgen -intstyle ise -f vga_leds.ut vga_leds.ncd 
